@@ -1,6 +1,5 @@
 <?php
 $config = require 'app/config.php';
-require 'app/models/database.php';
 require 'app/services/net-usage-monitor.php';
 
 $pdo = new PDO('mysql:host=' . $config['db']['host'] . ';dbname=' . $config['db']['database'], $config['db']['username'], $config['db']['password']);
