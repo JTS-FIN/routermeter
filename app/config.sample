@@ -1,0 +1,24 @@
+<?php
+
+return [
+  'db' => [
+    'host' => 'localhost',
+    'username' => 'myusername',
+    'password' => 'mypassword',
+    'database' => 'mydatabase',
+    'debug' => true
+  ],
+  'routers' => [ // currently only supports one router in db
+    [
+      'ip' => '192.168.0.254',
+      'model' => 'Telewell TW-EAV510',
+      'routerInterface' => 'telewell-tw-eav-510.php',
+      'internetInterface' => 'usbo3g0',
+      'class' => 'TelewellTwEav510',
+      'auth' => [
+        'username' => 'admin',
+        'password' => 'admin'
+      ]
+    ]
+  ]
+];
