@@ -8,17 +8,23 @@ return [
     'database' => 'mydatabase',
     'debug' => true
   ],
-  'routers' => [ // currently only supports one router in db
-    [
-      'ip' => '192.168.0.254',
-      'model' => 'Telewell TW-EAV510',
-      'routerInterface' => 'telewell-tw-eav-510.php',
-      'internetInterface' => 'usbo3g0',
-      'class' => 'TelewellTwEav510',
-      'auth' => [
-        'username' => 'admin',
-        'password' => 'admin'
-      ]
+  'router' => [ // currently only supports one router in db
+    'ip' => '192.168.0.254',
+    'model' => 'Telewell TW-EAV510',
+    'routerInterface' => 'telewell-tw-eav-510.php',
+    'internetInterface' => 'usbo3g0',
+    'class' => 'TelewellTwEav510',
+    'auth' => [
+      'username' => 'admin',
+      'password' => 'admin'
     ]
-  ]
+  ],
+  'speedTest' => [
+    'safeToRun' => [
+      'minTrackingTime' => 300, // in seconds
+      'maxTrackingTime' => 600, // in seconds
+      'maxAverageSpeed' => 5 // kB per s
+    ]
+  ],
+  'trackingInterval' => 30 // if latest measurement is less than this, don't make a new measurement
 ];
